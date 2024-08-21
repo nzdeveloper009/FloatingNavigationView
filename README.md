@@ -18,7 +18,7 @@ A simple & curved & material bottom navigation for Android written in Kotlin
 
 ```gradle
 	dependencies {
-	        implementation 'com.github.nzdeveloper009:FloatingNavigationView:Tag'
+	        implementation 'com.github.nzdeveloper009:FloatingNavigationView:1.0.0'
 	}
 ```
 
