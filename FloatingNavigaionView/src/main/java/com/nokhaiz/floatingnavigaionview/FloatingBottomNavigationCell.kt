@@ -22,9 +22,9 @@ import com.nokhaiz.floatingnavigaionview.databinding.FloatingNavigationCellBindi
 /**
  * Floating Bottom Navigation Cell class.
  *
- * @author  Hamidreza Etebarian
+ * @author  Syed Nokhaiz Al Hassan
  * @version 1.0.0
- * @since   2019-02-23
+ * @since   2024-08-24
  */
 
 @Suppress("unused")

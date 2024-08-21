@@ -5,6 +5,7 @@ plugins {
     id("maven-publish")
 }
 
+
 android {
     namespace = "com.nokhaiz.floatingnavigaionview"
     compileSdk = 34
@@ -14,6 +15,13 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    lint {
+        abortOnError = false
+        ignoreWarnings = true
+        disable.add("MissingDefaultResource")
     }
 
     buildTypes {
@@ -21,8 +29,10 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
+            consumerProguardFiles("proguard-rules.pro")
+            consumerProguardFiles("consumer-rules.pro")
         }
     }
     compileOptions {
@@ -39,6 +49,18 @@ android {
     }
 }
 
+/*java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 publishing {
     publications {
         register<MavenPublication>("release") {
@@ -47,7 +69,12 @@ publishing {
             }
         }
     }
-}
+
+    repositories {
+        mavenLocal()
+    }
+}*/
+
 
 dependencies {
 
