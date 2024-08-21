@@ -75,6 +75,23 @@ publishing {
     }
 }*/
 
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                from (components["release"])
+                groupId = "com.github.nzdeveloper009"
+                artifactId = "FloatingNavigationView"
+                version = "1.0.0"
+            }
+        }
+
+        repositories {
+            mavenLocal()
+        }
+    }
+}
+
 
 dependencies {
 
