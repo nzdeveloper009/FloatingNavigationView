@@ -27,8 +27,8 @@ Add Floating Bottom Navigation in you layout xml file.
 
 ```Usage
 	<com.nokhaiz.floatingnavigaionview.FloatingBottomNavigation
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"/>
 ```
 Add menu items in code.
 
